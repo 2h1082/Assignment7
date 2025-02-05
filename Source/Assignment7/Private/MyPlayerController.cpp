@@ -8,6 +8,7 @@ AMyPlayerController::AMyPlayerController() :
 	InputMappingContext(nullptr),
 	MoveForwardAction(nullptr),
 	MoveRightAction(nullptr),
+	MoveUpAction(nullptr),
 	LookAction(nullptr)
 {}
 

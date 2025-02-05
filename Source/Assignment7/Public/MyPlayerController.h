@@ -29,9 +29,16 @@ public:
 	//IA_MoveRight 지정 변수
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	UInputAction* MoveRightAction;
+	//IA_MoveUp 지정 변수
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	UInputAction* MoveUpAction;
 	//IA_Look 지정 변수
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
 	UInputAction* LookAction;
+	//IA_Roll 지정 변수
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	UInputAction* RollAction;
+
 
 	virtual void BeginPlay() override;
 };

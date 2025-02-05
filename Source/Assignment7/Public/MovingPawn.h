@@ -30,7 +30,14 @@ protected:
 	UFUNCTION()
 	void MoveRight(const FInputActionValue& Value);
 	UFUNCTION()
+	void MoveUp(const FInputActionValue& Value);
+	UFUNCTION()
 	void Look(const FInputActionValue& Value);
+	UFUNCTION()
+	void Roll(const FInputActionValue& Value);
+
+	void ApplyGravity(float DeltaTime);
+	bool IsOnGround() const;
 
 	//스프링 암
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
@@ -50,7 +57,18 @@ protected:
 	float MoveSpeed;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
 	float RotationSpeed;
+	//Roll 속도
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float RollSpeed;
+	//중력, 공중 제어 관련 변수
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float Gravity;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float AirControlFactor;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	float VerticalVelocity;
 
+	bool bIsOnGround;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
