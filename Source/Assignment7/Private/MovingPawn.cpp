@@ -99,7 +99,7 @@ void AMovingPawn::MoveRight(const FInputActionValue& Value)
 void AMovingPawn::MoveUp(const FInputActionValue& Value)
 {
 	//입력 값 변환
-	float AxisValue = Value.Get<float>(); // 1(우측), -1(좌측)
+	float AxisValue = Value.Get<float>(); // 1(위), -1(아래)
 	if (AxisValue != 0.0f)
 	{
 		//폰 위쪽 방향 벡터 획득
